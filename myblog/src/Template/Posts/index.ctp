@@ -9,11 +9,8 @@ $this->assign('title', 'Blog Posts');
 <ul>
   <?php foreach ($posts as $post) : ?>
     <li>
-      <!-- <?= $this->Html->link($post->title, ['controller'=>'Posts', 'action'=>'view', $post->id]); ?> -->
-      <!-- <?= $this->Html->link($post->title, ['action'=>'view', $post->id]); ?> -->
-      <a href="<?= $this->Url->build(['action'=>'view', $post->id]); ?>">
-        <?= h($post->title); ?>
-      </a>
+      <?= $this->Html->link($post->title, ['action'=>'view', $post->id]); ?>
+      <?= $this->Html->link('[Edit]', ['action'=>'edit', $post->id], ['class'=>'fs12']); ?>
     </li>
   <?php endforeach; ?>
 </ul>
