@@ -9,6 +9,8 @@
 </head>
 <body>
     <?= $this->element('my_header') ?>
+    <?= $this->Flash->render() ?>
+
     <section class="container">
         <?= $this->fetch('content') ?>
     </section >
